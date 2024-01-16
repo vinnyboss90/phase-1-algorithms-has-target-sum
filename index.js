@@ -1,5 +1,19 @@
 function hasTargetSum(array, target) {
   // Write your algorithm here
+  for (let i = 0; i < array.length; i++)
+  {
+    let firstNum = array[i];
+
+    let secondNum = target - firstNum;
+
+    for (let j = i + 1; j < array.length; j++) {
+      if (array[j] === secondNum)
+       {
+        return true;
+      }
+    }
+  }
+  return false;
 }
 
 /* 
